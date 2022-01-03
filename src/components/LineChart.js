@@ -1,11 +1,11 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
-// import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title } from 'chart.js';
+import { Chart as ChartJS, LineElement, PointElement, LinearScale, CategoryScale } from 'chart.js';
 
-// ChartJS.register(LineElement, PointElement, LinearScale, Title);
+ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale);
 
-// const { Typography } = Typography;
+const { Title } = Typography;
 
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
@@ -17,41 +17,43 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     coinTimeStamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString())
   }
 
-  // const data = {
-  //   labels: coinTimeStamp,
-  //   datasets: [
-  //     {
-  //       label: 'Price in USD',
-  //       data: coinPrice,
-  //       fill: false,
-  //       backgroundColor: '#0071bd',
-  //       borderColor: '#0071bd'
-  //     }
-  //   ]
-  // }
+  // console.log(coinTimeStamp)
 
-  // const options = {
-  //   scales: {
-  //     yAxes: [
-  //       {
-  //         ticks: {
-  //           beginAtZero: true
-  //         }
-  //       }
-  //     ]
-  //   }
-  // }
+  const data = {
+    labels: coinTimeStamp,
+    datasets: [
+      {
+        label: 'Price in USD',
+        data: coinPrice,
+        fill: false,
+        backgroundColor: 'rgb(75, 192, 192)',
+        borderColor: 'rgb(75, 192, 192)'
+      }
+    ]
+  }
+
+  const options = {
+    scales: {
+      y: 
+        {
+          ticks: {
+            beginAtZero: true
+          }
+        }
+      
+    }
+  }
 
   return (
     <>
       <Row className="chart-header">
-        <Typography level={2} className="chart-Typography">{coinName} Price Chart</Typography>
+        <Title level={2} className="chart-Typography">{coinName} Price Chart</Title>
         <Col className="price-container">
-          <Typography level={5} className="price-change">{coinHistory?.data?.change}%</Typography>
-          <Typography level={5} className="current-price">Current {coinName} Price: ${currentPrice}</Typography>
+          <Title level={5} className="price-change">{coinHistory?.data?.change}%</Title>
+          <Title level={5} className="current-price">Current {coinName} Price: ${currentPrice}</Title>
         </Col>
       </Row>
-      {/* <Line data={data} options={options} /> */}
+      <Line data={data} options={options} />
     </>
   )
 }
