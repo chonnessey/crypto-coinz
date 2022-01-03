@@ -1,9 +1,9 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
-import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title } from 'chart.js';
+// import { Chart as ChartJS, LineElement, PointElement, LinearScale, Title } from 'chart.js';
 
-ChartJS.register(LineElement, PointElement, LinearScale, Title);
+// ChartJS.register(LineElement, PointElement, LinearScale, Title);
 
 // const { Typography } = Typography;
 
@@ -17,30 +17,30 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     coinTimeStamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString())
   }
 
-  const data = {
-    labels: coinTimeStamp,
-    datasets: [
-      {
-        label: 'Price in USD',
-        data: coinPrice,
-        fill: false,
-        backgroundColor: '#0071bd',
-        borderColor: '#0071bd'
-      }
-    ]
-  }
+  // const data = {
+  //   labels: coinTimeStamp,
+  //   datasets: [
+  //     {
+  //       label: 'Price in USD',
+  //       data: coinPrice,
+  //       fill: false,
+  //       backgroundColor: '#0071bd',
+  //       borderColor: '#0071bd'
+  //     }
+  //   ]
+  // }
 
-  const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true
-          }
-        }
-      ]
-    }
-  }
+  // const options = {
+  //   scales: {
+  //     yAxes: [
+  //       {
+  //         ticks: {
+  //           beginAtZero: true
+  //         }
+  //       }
+  //     ]
+  //   }
+  // }
 
   return (
     <>
@@ -51,7 +51,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
           <Typography level={5} className="current-price">Current {coinName} Price: ${currentPrice}</Typography>
         </Col>
       </Row>
-      <Line data={data} options={options} />
+      {/* <Line data={data} options={options} /> */}
     </>
   )
 }
