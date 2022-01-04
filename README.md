@@ -6,7 +6,7 @@
 
 ### Project Description :pencil:
 
-This app is tracker for the top 100 crypto currencies in the world. There is loads of information on the subject matter within the app including live pricing, price history, market caps and the latest news on crypto. 
+This app is tracker for the top 100 crypto currencies in the world. There is loads of information on the subject matter within the app including live pricing, price history, market caps and the latest news on crypto. View the live site **[here](https://objective-heyrovsky-7f62af.netlify.app/)!**
 ___
 ### Tech Stack :floppy_disk:
 1. HTML5+CSS3
