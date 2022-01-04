@@ -1,8 +1,8 @@
-# Crypto Coinz :no_entry_sign:
+# Crypto Coinz :gem:
 ## By Adrian Camacho :electric_plug:
 
 ---
-![I am GitHub Readme Generator's creator](src/assets/86screenshot.png)
+![I am GitHub Readme Generator's creator](src/images/crypto.png)
 
 ### Project Description :pencil:
 
@@ -16,6 +16,10 @@ ___
 5. Chart.js
 6. React-chart-js2
 7. Millify
+8. [Coinranking-API](https://rapidapi.com/Coinranking/api/coinranking1/)
+9. [Bing-News-Search-API](https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel)
+10. React-Redux Toolkit
+11. Axios
 ---
 ### Installation Instructions :pushpin:
 1. Clone this repo: `git clone https://github.com/chonnessey/crypto-coinz.git`
